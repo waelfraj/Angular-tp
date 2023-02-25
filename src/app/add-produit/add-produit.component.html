@@ -1,1 +1,40 @@
 <app-navbar></app-navbar>
+<div class="container">
+    <div class="card shadow mb-4 mt-4">
+        <div class="card-body">
+            <div>
+                <h2>Ajouter un Produit : </h2>
+            </div>
+            <form>
+                <div class="row mt-4">
+                    <div class="col-sm-2 col-md-2 col-lg-2">
+                        <label>ID Produit</label>
+                        <input type="text" [(ngModel)]="newProduit.idProduit" name="idProduit" class="form-control">
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                        <label>Nom Produit</label>
+                        <input type="text" [(ngModel)]="newProduit.nomProduit" name="nomProduit" class="form-control">
+                    </div>
+                    <div class="col-sm-2 col-md-2 col-lg-2">
+                        <label>Prix Produit</label>
+                        <input type="number" [(ngModel)]="newProduit.prixProduit" name="prixProduit"
+                            class="form-control">
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                        <label>Date création</label>
+                        <input type="date" [(ngModel)]="newProduit.dateCreation" name="dateCreation"
+                            class="form-control">
+                    </div>
+                </div>
+                <div class="pt-3">
+                    <div class="mt-2 d-flex flex-row-reverse">
+                        <button type="submit" (click)="addProduit()" class="btn btn-lg btn-success ">Ajouter</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<br><br>
+<app-produits></app-produits>
